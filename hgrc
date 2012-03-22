@@ -1,0 +1,46 @@
+[ui]
+username = Norbert Kéri <keri.norbert.miklos@gmail.com>
+editor = vim
+commitsubrepos = false
+
+[merge-tools]
+threesome.executable = vim
+threesome.args = -f $base $local $other $output -c 'ThreesomeInit'
+threesome.premerge = keep
+threesome.priority = 1
+
+keepthat.executable = sh
+keepthat.args = -c 'cp "$local" "$output.original" && cp "$other" "$output"'
+keepthat.premerge = True
+
+keepthis.executable = sh
+keepthis.args = -c 'cp "$other" "$output.incoming" && cp "$local" "$output"'
+keepthis.premerge = True
+
+[extensions]
+color=
+mq=
+graphlog=
+rebase=
+progress=
+extdiff=
+pager=
+
+[progress]
+delay=1.0
+
+[extdiff]
+cmd.dirdiff = gvim
+opts.dirdiff = -c 'set lines=70' -c 'set columns=240' -f '+next' '+execute "DirDiff" argv(0) argv(1)'
+
+[bookmarks]
+track.current = true
+
+[defaults]
+addremove = --similarity 100
+diff = -p
+
+[alias]
+gl = glog -l10 --template='\033[0;33m{rev}\033[0m {desc|firstline|strip} \033[0;35m{branches}\033[0m \033[0;33m{tags}\033[0m\n\033[1;30m({date|age} by {author|person})\033[0m\n\n'
+
+%include ~/.hgrc_local

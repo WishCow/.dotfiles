@@ -35,6 +35,8 @@ links[~/.config/feh]=~/.dotfiles/feh
 links[~/.tmux.conf]=~/.dotfiles/tmux.conf
 links[~/.Xresources]=~/.dotfiles/Xresources
 links[~/.ackrc]=~/.dotfiles/ackrc
+links[~/.gitconfig]=~/.dotfiles/gitconfig
+links[~/.hgrc]=~/.dotfiles/hgrc
 
 for v in "${dirs[@]}"; do
     if [ -e "$v" ]; then
