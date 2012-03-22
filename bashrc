@@ -17,7 +17,16 @@ export PROMPT_COMMAND="history -a"
 export EDITOR="vim"
 
 # Interpret colors in less
-export LESS=' -R '
+export PAGER=less
+
+# J: Mark rows that match a search string
+# F: Exit immediately if output is less than one page
+# R: Interpret colors
+# i: Smart ignore case when searching
+# X: Don't clear the screen
+# M: Awlays show status line
+# Q: Disable terminal bells
+export LESS=' -JFRiXMQ '
 
 # Append to history
 shopt -s histappend
