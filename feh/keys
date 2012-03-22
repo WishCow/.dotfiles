@@ -1,0 +1,15 @@
+save_filelist
+action_0
+remove
+toggle_fullscreen f
+next_img l
+prev_img h
+scroll_down_page j
+scroll_up_page k
+delete Delete
+scroll_left 1-h
+scroll_right 1-l
+scroll_up 1-k
+scroll_down 1-j
+close q
+render Return
