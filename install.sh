@@ -33,6 +33,8 @@ links[~/.inputrc]=~/.dotfiles/inputrc
 links[~/.bashrc]=~/.dotfiles/bashrc
 links[~/.config/feh]=~/.dotfiles/feh
 links[~/.tmux.conf]=~/.dotfiles/tmux.conf
+links[~/.Xresources]=~/.dotfiles/Xresources
+links[~/.ackrc]=~/.dotfiles/ackrc
 
 for v in "${dirs[@]}"; do
     if [ -e "$v" ]; then
