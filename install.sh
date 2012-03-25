@@ -27,7 +27,7 @@ skip() {
 declare -a dirs
 declare -A links
 
-dirs=(~/.config ~/.mpd ~/.mpd/playlists)
+dirs=(~/.config ~/.mpd ~/.mpd/playlists ~/.ncmpcpp)
 
 links[~/.inputrc]=~/.dotfiles/inputrc
 links[~/.bashrc]=~/.dotfiles/bashrc
@@ -38,6 +38,7 @@ links[~/.ackrc]=~/.dotfiles/ackrc
 links[~/.gitconfig]=~/.dotfiles/gitconfig
 links[~/.hgrc]=~/.dotfiles/hgrc
 links[~/.mpdconf]=~/.dotfiles/mpdconf
+links[~/.ncmpcpp/config]=~/.dotfiles/ncmpcpp/config
 
 for v in "${dirs[@]}"; do
     if [ -e "$v" ]; then
