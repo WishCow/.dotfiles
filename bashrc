@@ -71,3 +71,6 @@ export VIDIR_EDITOR_ARGS='-c :set nolist | :set ft=vidir-ls'
 # Import per-host based settings if they exist
 perhost=~/.dotfiles/perhost/"$(hostname)".bashrc
 [ -f "$perhost" ] && . "$perhost"
+
+# DirColors from trapd00r
+eval $(dircolors -b ~/.dotfiles/lscolors/LS_COLORS)
