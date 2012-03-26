@@ -1,2 +1,2 @@
 --smart-case
---type-set twig=.twig
+--type-set=twig=.twig
