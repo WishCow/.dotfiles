@@ -36,4 +36,6 @@ URxvt.matcher.button: 1
 URxvt.iso14755_52: false
 URxvt.iso14755: false
 
+URxvt.iconFile: /usr/share/icons/Faenza/apps/16/terminal.png
+
 !URxvt.keysym.C-S-v: perl:clipboard:paste
