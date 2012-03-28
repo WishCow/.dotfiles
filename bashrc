@@ -56,7 +56,7 @@ shopt -s nocaseglob
 alias serve="python -m SimpleHTTPServer"
 
 # Show diffs when commiting with hg
-export HGEDITOR=~/.scripts/hgeditor
+export HGEDITOR=~/.scripts/hg/hgeditor
 
 # Syntax highlight for less, needs source-highlight pkg
 SRCHL=/usr/bin/src-hilite-lesspipe.sh
