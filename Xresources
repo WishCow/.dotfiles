@@ -38,4 +38,4 @@ URxvt.iso14755: false
 
 URxvt.iconFile: /usr/share/icons/Faenza/apps/16/terminal.png
 
-!URxvt.keysym.C-S-v: perl:clipboard:paste
+URxvt.keysym.C-V: perl:clipboard:paste
