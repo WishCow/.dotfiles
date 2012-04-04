@@ -63,3 +63,17 @@ hgr() {
         printf "\n"
     done
 }
+
+cd() {
+  if [ $# -eq 0 ]; then
+    DIR="${HOME}"
+  else
+    DIR="$1"
+  fi
+
+  builtin pushd "${DIR}" > /dev/null
+}
+
+back() {
+  builtin popd > /dev/null
+}
