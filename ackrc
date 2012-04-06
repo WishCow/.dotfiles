@@ -1,2 +1,3 @@
 --smart-case
 --type-set=twig=.twig
+--type-set=sh=.sh
