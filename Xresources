@@ -27,7 +27,7 @@ URxvt.colorIT:      #87af5f
 URxvt.colorBD:      #d7d7d7
 URxvt.colorUL:      #87afd7
 
-URxvt.perl-ext-common: default,url-select,matcher,clipboard
+URxvt.perl-ext-common: default,url-select,matcher,clipboard,-searchable-scrollback
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.urlLauncher: firefox
 URxvt.underlineURLs: true
@@ -39,3 +39,4 @@ URxvt.iso14755: false
 URxvt.iconFile: /usr/share/icons/Faenza/apps/16/terminal.png
 
 URxvt.keysym.C-V: perl:clipboard:paste
+URxvt.saveLines: 0
