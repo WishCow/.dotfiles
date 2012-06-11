@@ -39,6 +39,7 @@ links[~/.gitconfig]=~/.dotfiles/gitconfig
 links[~/.hgrc]=~/.dotfiles/hgrc
 links[~/.mpdconf]=~/.dotfiles/mpdconf
 links[~/.ncmpcpp/config]=~/.dotfiles/ncmpcpp/config
+links[~/.ncmpcpp/keys]=~/.dotfiles/ncmpcpp/keys
 links[~/.vimrc]=~/.vim/.vimrc
 
 for v in "${dirs[@]}"; do
