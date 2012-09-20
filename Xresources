@@ -1,4 +1,4 @@
-URxvt.background:  #1e1e1e
+URxvt.background:  #2e1e1e
 URxvt.foreground:  white
 URxvt.cursorColor: #00ff00
 URxvt.scrollBar: false
@@ -29,8 +29,8 @@ URxvt.colorUL:      #87afd7
 
 URxvt.perl-ext-common: default,url-select,matcher,clipboard,-searchable-scrollback
 URxvt.keysym.M-u: perl:url-select:select_next
-URxvt.urlLauncher: firefox
-URxvt.underlineURLs: true
+URxvt.url-select.launcher: firefox
+URxvt.url-select.underline: true
 URxvt.matcher.button: 1
 
 URxvt.iso14755_52: false
