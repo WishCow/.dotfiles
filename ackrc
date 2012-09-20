@@ -2,3 +2,5 @@
 --type-set=twig=.twig
 --type-set=sh=.sh
 --type-set=ini=ini
+--type-set=less=.less
+--ignore-dir=cache
