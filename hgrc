@@ -25,6 +25,7 @@ rebase=
 progress=
 extdiff=
 pager=
+transplant=
 
 [progress]
 delay=1.0
