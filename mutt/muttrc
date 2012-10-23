@@ -1,0 +1,84 @@
+set spoolfile = "imaps://imap.gmail.com:993/INBOX"
+set folder = "imaps://imap.gmail.com:993"
+set postponed = "+[Gmail]/Drafts"
+set header_cache = "~/.mutt/cache/headers/"
+set message_cachedir = "~/.mutt/cache/bodies/"
+set certificate_file = "~/.mutt/certificates"
+
+set sort = threads
+set sort_aux = reverse-last-date-received
+
+set sidebar_visible = yes
+set sidebar_width = 20
+set sidebar_delim = '│'
+color sidebar_new color221 color233
+
+set mailcap_path     = ~/.mutt/mailcap
+set tmpdir           = ~/.mutt/temp
+
+set wait_key = no        # Do not wait for enter, when piping to another program
+unset move               # gmail does that
+set delete               # Don't ask for deletion
+unset confirmappend      # Don't ask when saving sent mails
+set quit                 # Quit without asking
+unset mark_old           # Don't mark unread messages as old when exiting
+set pipe_decode          # strip headers and eval mimes when piping
+set thorough_search      # strip headers and eval mimes before searching
+
+# Status Bar -----------------------------------------
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# Header Options -------------------------------------
+ignore *                                # ignore all headers
+unignore from: to: cc: date: subject:   # show only these
+unhdr_order *                           # some distros order things by default
+hdr_order from: to: cc: date: subject:  # and in this order
+
+set date_format = "%Y/%m/%d %H:%M"
+set index_format = "[%Z] %D %-30.30F  %s"
+
+mailboxes "+INBOX" "+[Gmail]/Sent Mail" "+[Gmail]/Drafts"
+
+#source ~/.dotfiles/mutt/colors/solarized.muttrc
+source ~/.dotfiles/mutt/colors/random.muttrc
+#source ~/.dotfiles/mutt/colors/ivy_league.theme
+
+# Pager View Options ---------------------------------
+set pager_index_lines = 10 # number of index lines to show
+set pager_context = 3      # number of context lines to show
+set pager_stop             # don't go to next message automatically
+set menu_scroll            # scroll in menus
+set tilde                  # show tildes like in vim
+unset markers              # no ugly plus signs
+
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+alternative_order text/plain text/enriched text/html
+
+# Compose View Options -------------------------------
+set realname = "Norbert Kéri"          # who am i?
+set envelope_from                    # which from?
+set edit_headers                     # show headers when composing
+set fast_reply                       # skip to compose when replying
+set fcc_attach                       # save attachments with the body
+unset mime_forward                   # forward attachments as part of body
+set forward_format = "Fwd: %s"       # format of subject when forwarding
+set forward_decode                   # decode when forwarding
+set attribution = "On %d, %n wrote:" # format of quoting header
+set reply_to                         # Reply to the Reply to: field, if present
+set reverse_name                     # reply as whomever the mail was sent to, instead of the current one
+set include                          # Quote original message when replying
+set forward_quote                    # Quote original message when forwarding
+
+set editor = "vim -c 'set textwidth=0 | normal }j'"
+
+set sleep_time = 0
+
+set query_command = "abook --mutt-query '%s'"
+
+source ~/.dotfiles/mutt/config/binds.muttrc
+
+# Specify the following in the local muttrc file:
+# realname, imap_user, from, imap_pass, smtp_pass, smtp_url, realname
+
+source ~/.muttrc.local

@@ -1,0 +1,40 @@
+bind pager k previous-line
+bind pager j next-line
+bind pager gg top
+bind pager G bottom
+bind pager R group-reply
+bind pager d delete-thread
+bind pager r reply
+bind pager l next-entry
+bind pager h previous-entry
+bind pager <space> next-new
+macro pager A "<pipe-message>abook --add-email-quiet<return>" "add the sender address to abook"
+
+macro index a "<limit>all\n" "show all messages (undo limiting)"
+macro index A "<pipe-message>abook --add-email-quiet<return>" "add the sender address to abook"
+macro index \Ca "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
+bind index ';' tag-prefix-cond
+bind index j next-entry
+bind index k previous-entry
+bind index p recall-message
+bind index 1G first-entry
+bind index G last-entry
+bind index r group-reply
+bind index R reply
+bind index <space> next-new
+bind index <tab> sync-mailbox
+bind index K sidebar-prev
+bind index J sidebar-next
+bind index o sidebar-open
+bind index za collapse-all
+bind index e resend-message
+bind index T tag-pattern
+bind index c mail
+bind index U undelete-pattern
+bind index a view-attachments
+bind index N search-reverse
+bind index L limit
+
+bind attach <return> view-mailcap
+bind editor <tab> complete-query
+bind compose s send-message
