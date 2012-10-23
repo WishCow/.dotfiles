@@ -1,0 +1,3 @@
+set index_format="{name:60} {email:60} {notes:40}"
+set sort_field=name
+set address_style=eu
