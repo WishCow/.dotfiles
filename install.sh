@@ -42,6 +42,7 @@ links[~/.ncmpcpp/config]=~/.dotfiles/ncmpcpp/config
 links[~/.ncmpcpp/keys]=~/.dotfiles/ncmpcpp/keys
 links[~/.vimrc]=~/.vim/.vimrc
 links[~/.muttrc]=~/.dotfiles/mutt/muttrc
+links[~/.abook/abookrc]=~/.dotfiles/abookrc
 
 for v in "${dirs[@]}"; do
     if [ -e "$v" ]; then
