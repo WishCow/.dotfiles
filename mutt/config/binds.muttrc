@@ -4,7 +4,8 @@ bind pager gg top
 bind pager G bottom
 bind pager R group-reply
 bind pager d delete-thread
-bind pager r reply
+bind pager R reply
+bind pager r group-reply
 bind pager l next-entry
 bind pager h previous-entry
 bind pager <space> next-new
@@ -38,3 +39,4 @@ bind index L limit
 bind attach <return> view-mailcap
 bind editor <tab> complete-query
 bind compose s send-message
+bind compose p postpone-message

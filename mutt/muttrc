@@ -1,6 +1,3 @@
-set spoolfile = "imaps://imap.gmail.com:993/INBOX"
-set folder = "imaps://imap.gmail.com:993"
-set postponed = "+[Gmail]/Drafts"
 set header_cache = "~/.mutt/cache/headers/"
 set message_cachedir = "~/.mutt/cache/bodies/"
 set certificate_file = "~/.mutt/certificates"
@@ -37,8 +34,6 @@ hdr_order from: to: cc: date: subject:  # and in this order
 
 set date_format = "%Y/%m/%d %H:%M"
 set index_format = "[%Z] %D %-30.30F  %s"
-
-mailboxes "+INBOX" "+[Gmail]/Sent Mail" "+[Gmail]/Drafts"
 
 #source ~/.dotfiles/mutt/colors/solarized.muttrc
 source ~/.dotfiles/mutt/colors/random.muttrc
@@ -79,6 +74,6 @@ set query_command = "abook --mutt-query '%s'"
 source ~/.dotfiles/mutt/config/binds.muttrc
 
 # Specify the following in the local muttrc file:
-# realname, imap_user, from, imap_pass, smtp_pass, smtp_url, realname
+# spoofile, folder, mailboxes, postponed, realname, imap_user, from, imap_pass, smtp_pass, smtp_url, realname
 
 source ~/.muttrc.local
