@@ -1,5 +1,11 @@
 #!/bin/bash -eu
 
+CACHEDIR="$HOME/.dotfiles/scratchpad"
+MARKFILE="$CACHEDIR/marks"
+if [ ! -f $MARKFILE ]; then
+    echo "declare -A _DIRMARKS='()'" > $MARKFILE
+fi
+
 vi() {
     vim "$@"
 }
@@ -75,5 +81,42 @@ cd() {
 }
 
 back() {
-  builtin popd > /dev/null
+    local MARK="${1-}"
+    eval $(cat $MARKFILE)
+    if [ -n "$MARK" ]; then
+        if [ -n "${_DIRMARKS[$MARK]}" ]; then
+            cd "${_DIRMARKS[$MARK]}"
+        else
+            echo "Mark $MARK is not set"
+        fi
+    else
+        builtin popd > /dev/null
+    fi
+}
+
+marks() {
+    eval $(cat $MARKFILE)
+    for KEY in "${!_DIRMARKS[@]}"; do
+        printf "%s => %s\n" "$KEY" "${_DIRMARKS[$KEY]}"
+    done
+}
+
+mark() {
+    local MARK="${1-}"
+    eval $(cat $MARKFILE)
+    if [ -z "$MARK" ]; then
+        echo "Provide a mark name"
+    else
+        _DIRMARKS[$MARK]="$PWD"
+        rm $MARKFILE && declare -p _DIRMARKS > $MARKFILE
+    fi
+}
+
+dmark() {
+    eval $(cat $MARKFILE)
+    local MARKS="$@"
+    for KEY in $MARKS; do
+        unset _DIRMARKS["$KEY"]
+    done
+    rm $MARKFILE && declare -p _DIRMARKS > $MARKFILE
 }
