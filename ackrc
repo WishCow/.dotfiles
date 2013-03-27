@@ -5,3 +5,4 @@
 --type-set=less=.less
 --type-set=behat=.feature
 --ignore-dir=cache
+--type-set=markdown=.md
