@@ -16,6 +16,7 @@
 
 [merge]
     tool = threesome
+    defaultToUpstream = true
 
 [mergetool "threesome"]
     cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
