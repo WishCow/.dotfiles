@@ -13,6 +13,7 @@
     sdiff = diff --cached
     ci = commit
     amend = commit --amend -C HEAD
+    pull = pull --ff-only
 
 [merge]
     tool = threesome
