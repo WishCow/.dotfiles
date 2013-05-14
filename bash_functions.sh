@@ -10,10 +10,6 @@ vi() {
     vim "$@"
 }
 
-pacman() {
-    pacman-color "$@"
-}
-
 # Run a command in a horizontal/vertical split tmux window, and keep/give focus
 bgh() {
     local ARGS="$@"
