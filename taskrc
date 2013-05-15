@@ -27,10 +27,10 @@ include /usr/share/doc/task/rc/dark-gray-256.theme
 
 color=on
 dateformat=Y-M-D
-dateformat.annotation=Y-M-D H:M
-dateformat.edit=Y-M-D H:M
-dateformat.info=Y-M-D H:M
-dateformat.report=Y-M-D
+dateformat.annotation=Y-M-D H:N
+dateformat.edit=Y-M-D H:N
+dateformat.info=Y-M-D H:N
+dateformat.report=Y-M-D H:N
 default.command=list
 report.list.columns=id,project,tags,due,entry.age,description
 report.list.labels=ID,Project,Tags,Due,Age,Desc
