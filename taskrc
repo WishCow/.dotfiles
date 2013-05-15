@@ -1,4 +1,4 @@
-# [Created by task 1.9.4 1/21/2012 19:26:44]
+# [Created by task 2.2.0 5/14/2013 23:51:54]
 # Taskwarrior program configuration file.
 # For more documentation, see http://taskwarrior.org or try 'man task', 'man task-faq',
 # 'man task-tutorial', 'man task-color', 'man task-sync' or 'man taskrc'
@@ -11,21 +11,27 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=/home/wishcow/.task
+data.location=~/.task
 
 # Color theme (uncomment one to use)
-#include /usr/local/share/doc/task/rc/light-16.theme
-#include /usr/local/share/doc/task/rc/light-256.theme
-#include /usr/local/share/doc/task/rc/dark-16.theme
-#include /usr/local/share/doc/task/rc/dark-256.theme
-#include /usr/local/share/doc/task/rc/dark-red-256.theme
-#include /usr/local/share/doc/task/rc/dark-green-256.theme
-#include /usr/local/share/doc/task/rc/dark-blue-256.theme
-#include /usr/local/share/doc/task/rc/dark-violets-256.theme
-#include /usr/local/share/doc/task/rc/dark-yellow-green.theme
-#include /usr/share/doc/task/rc/solarized-dark-256.theme
-
-include /usr/share/doc/task/rc/dark-blue-256.theme
+#include /usr/share/doc/task/rc/light-16.theme
+#include /usr/share/doc/task/rc/light-256.theme
+#include /usr/share/doc/task/rc/dark-16.theme
+#include /usr/share/doc/task/rc/dark-256.theme
+#include /usr/share/doc/task/rc/dark-red-256.theme
+#include /usr/share/doc/task/rc/dark-green-256.theme
+#include /usr/share/doc/task/rc/dark-blue-256.theme
+#include /usr/share/doc/task/rc/dark-violets-256.theme
+#include /usr/share/doc/task/rc/dark-yellow-green.theme
+include /usr/share/doc/task/rc/dark-gray-256.theme
 
 color=on
-editor=vim
+dateformat=Y-M-D
+dateformat.annotation=Y-M-D H:M
+dateformat.edit=Y-M-D H:M
+dateformat.info=Y-M-D H:M
+dateformat.report=Y-M-D
+default.command=list
+report.list.columns=id,project,tags,due,entry.age,description
+report.list.labels=ID,Project,Tags,Due,Age,Desc
+weekstart=monday
