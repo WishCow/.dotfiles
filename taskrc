@@ -26,7 +26,7 @@ data.location=~/.task
 include /usr/share/doc/task/rc/dark-gray-256.theme
 
 color=on
-dateformat=Y-M-D
+dateformat=Y-M-D.H:N
 dateformat.annotation=Y-M-D H:N
 dateformat.edit=Y-M-D H:N
 dateformat.info=Y-M-D H:N
