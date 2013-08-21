@@ -64,7 +64,7 @@ key_next_column = 'l'
 #
 key_browser = '5'
 #
-#key_search_engine = '4' 268
+key_search_engine = '4' 's'
 #
 key_media_library = '3'
 #
@@ -80,13 +80,12 @@ key_media_library = '3'
 #
 #key_server_info = '@'
 #
-#key_stop = 's'
+key_stop = 0
 #
 key_pause = 'p'
 #
-key_next = '>' 261
-#
-key_prev = '<' 260
+key_next = 0
+key_prev = 0
 #
 #key_replay = 263 127
 #
