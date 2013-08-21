@@ -27,7 +27,7 @@ skip() {
 declare -a dirs
 declare -A links
 
-dirs=(~/.config ~/.mpd ~/.mpd/playlists ~/.ncmpcpp ~/.mutt/{temp,cache})
+dirs=(~/.config ~/.mpd ~/.mpd/playlists ~/.ncmpcpp ~/.mutt/{temp,cache}, ~/.vim/{temp,backup}, ~/.fluxbox)
 
 links[~/.inputrc]=~/.dotfiles/inputrc
 links[~/.bashrc]=~/.dotfiles/bashrc
@@ -44,6 +44,7 @@ links[~/.vimrc]=~/.vim/.vimrc
 links[~/.muttrc]=~/.dotfiles/mutt/muttrc
 links[~/.abook/abookrc]=~/.dotfiles/abookrc
 links[~/.taskrc]=~/.dotfiles/taskrc
+links[~/.fluxbox/keys]=~/.dotfiles/fluxbox/keys
 
 for v in "${dirs[@]}"; do
     if [ -e "$v" ]; then
