@@ -1,7 +1,9 @@
 save_filelist
 action_0
 remove
-toggle_fullscreen f
+toggle_fullscreen Return
+zoom_fit f
+zoom_default s
 next_img l
 prev_img h
 scroll_down_page j
@@ -12,4 +14,3 @@ scroll_right 1-l
 scroll_up 1-k
 scroll_down 1-j
 close q
-render Return

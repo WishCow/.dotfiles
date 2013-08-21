@@ -1,2 +1,2 @@
-show --borderless --draw-filename --no-menus --hide-pointer --scale-down --sort name --info "echo -e '%wx%h\n%S %m'"
-thumbs --thumbnails --draw-filename --no-menus --borderless --hide-pointer --scale-down --limit-width 180 --thumb-width 180 --thumb-height 180 --title thumblist --thumb-title thumbshow --info "echo -e '%wx%h\n%S %m'"
+show --draw-filename --scale-down --no-menus --sort name --info "echo -e '%wx%h\n%S %m'"
+thumbs --thumbnails --draw-filename --no-menus --scale-down --limit-width 180 --thumb-width 180 --thumb-height 180 --title thumblist --thumb-title thumbshow --info "echo -e '%wx%h\n%S %m'"
