@@ -22,21 +22,24 @@ URxvt.color13: #ad7fa8
 URxvt.color14: #34e2e2
 URxvt.color15: #d4d4d4
 
-
 URxvt.colorIT:      #87af5f
 URxvt.colorBD:      #d7d7d7
 URxvt.colorUL:      #87afd7
 
-URxvt.perl-ext-common: default,url-select,matcher,clipboard,-searchable-scrollback
+
+URxvt.perl-ext-common: default,url-select,matcher,clipboard,-searchable-scrollback,autocomplete-ALL-the-things
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: firefox
 URxvt.url-select.underline: true
 URxvt.matcher.button: 1
 
+! Needs urxvt-autocomplete-all-the-things-git
+URxvt.keysym.M-d: perl:aAtt:complete
+
 URxvt.iso14755_52: false
 URxvt.iso14755: false
 
-URxvt.iconFile: /usr/share/icons/Faenza/apps/16/terminal.png
+URxvt.iconFile: /usr/share/icons/NITRUX/apps/scalable/terminal.svg
 
 URxvt.keysym.C-V: perl:clipboard:paste
 URxvt.saveLines: 0
