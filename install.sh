@@ -32,6 +32,7 @@ dirs=(~/.config ~/.mpd ~/.mpd/playlists ~/.ncmpcpp ~/.mutt/{temp,cache}, ~/.vim/
 links[~/.inputrc]=~/.dotfiles/inputrc
 links[~/.bashrc]=~/.dotfiles/bashrc
 links[~/.config/feh]=~/.dotfiles/feh
+links[~/.config/tint2]=~/.dotfiles/tint2
 links[~/.tmux.conf]=~/.dotfiles/tmux.conf
 links[~/.Xresources]=~/.dotfiles/Xresources
 links[~/.ackrc]=~/.dotfiles/ackrc
