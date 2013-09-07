@@ -102,7 +102,11 @@ Mod1 Down :Minimize
 Mod1 Up :Maximize
 Mod4 e :Exec thunar
 Mod1 F2 :Exec xkill
-Mod1 F3 :Exec tile
+#Mod1 F3 :Exec tile
+Mod4 s :ArrangeWindowsHorizontal (Name!=tint2)
+Mod4 v :ArrangeWindowsVertical (Name!=tint2)
+
 Mod1 F12 :Exec ncmpcpp next
 Mod1 F11 :Exec ncmpcpp toggle
 Mod1 F10 :Exec ncmpcpp prev
+Mod1 F :Fullscreen
