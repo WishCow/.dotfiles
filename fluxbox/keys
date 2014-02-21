@@ -109,6 +109,6 @@ Mod4 v :ArrangeWindowsVertical (Name!=tint2)
 Mod1 F12 :Exec ncmpcpp next
 Mod1 F11 :Exec ncmpcpp toggle
 Mod1 F10 :Exec ncmpcpp prev
-Mod1 F :Fullscreen
 Mod4 o :SendToNextHead
 Mod4 l :Exec ~/scripts/lock.sh
+Print :Exec ~/scripts/screenshot.sh

@@ -4,5 +4,6 @@
 --type-set=ini=ini
 --type-set=less=.less
 --type-set=behat=.feature
+--type-set=scss=.scss
 --ignore-dir=cache
 --type-set=markdown=.md

@@ -77,3 +77,5 @@ source ~/.dotfiles/mutt/config/binds.muttrc
 # spoofile, folder, mailboxes, postponed, realname, imap_user, from, imap_pass, smtp_pass, smtp_url, realname
 
 source ~/.muttrc.local
+
+auto_view text/html

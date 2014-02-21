@@ -1,16 +1,15 @@
 save_filelist
 action_0
+action_1 F2
 remove
 toggle_fullscreen Return
 zoom_fit f
 zoom_default s
-next_img l
-prev_img h
-scroll_down_page j
-scroll_up_page k
+next_img l space
+prev_img h BackSpace
 delete Delete
-scroll_left 1-h
-scroll_right 1-l
-scroll_up 1-k
-scroll_down 1-j
+scroll_left Left
+scroll_right Right
+scroll_up Up
+scroll_down Down
 close q

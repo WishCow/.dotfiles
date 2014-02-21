@@ -14,13 +14,14 @@
     ci = commit
     amend = commit --amend -C HEAD
     pull = pull --ff-only
+    branch-diff = !git diff $(git merge-base $1 HEAD)..
 
 [merge]
-    tool = threesome
+    tool = splice
     defaultToUpstream = true
 
-[mergetool "threesome"]
-    cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
+[mergetool "splice"]
+    cmd = vim -f $BASE $LOCAL $REMOTE $MERGED -c SpliceInit
     trustExitCode = true
 
 [include]
