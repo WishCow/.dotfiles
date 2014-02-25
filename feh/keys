@@ -2,8 +2,7 @@ save_filelist
 action_0
 action_1 F2
 remove
-toggle_fullscreen Return
-zoom_fit f
+toggle_fullscreen Return f
 zoom_default s
 next_img l space
 prev_img h BackSpace
