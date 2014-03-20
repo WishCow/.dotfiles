@@ -3,8 +3,12 @@
 
 [color]
     ui = true
+
 [push]
-    default = tracking
+    default = upstream
+
+[pull]
+    rebase = true
 
 [alias]
     glog = log --color=always --graph --topo-order --branches --remotes --tags --pretty='format:%Cgreen%h%Creset %s %C(black bold)(by %an)%Creset%C(yellow bold)%d%Creset%n'
