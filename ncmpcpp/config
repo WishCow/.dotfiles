@@ -30,7 +30,7 @@
 #
 #mpd_port = "6600"
 #
-mpd_music_dir = "~/music"
+mpd_music_dir = "/home/wishcow/Music"
 #
 #mpd_connection_timeout = "5"
 #
