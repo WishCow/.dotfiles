@@ -12,7 +12,14 @@ export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S : "
 PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] '
 
 # Save history after each command
-export PROMPT_COMMAND="history -a"
+export PROMPT_COMMAND="prompt_command"
+
+prompt_command() {
+    history -a
+    if [ -n "$TMUX" ]; then
+        tmux setenv -g "TMUX_PWD_$(tmux display -p "#D")" "$PWD"
+    fi
+}
 
 export EDITOR="vim"
 
