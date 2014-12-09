@@ -27,14 +27,15 @@ URxvt.colorBD:      #d7d7d7
 URxvt.colorUL:      #87afd7
 
 
-URxvt.perl-ext-common: default,url-select,matcher,clipboard,-searchable-scrollback,autocomplete-ALL-the-things
+URxvt.perl-ext-common: default,url-select,matcher,clipboard,-searchable-scrollback,autocomplete
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: firefox
 URxvt.url-select.underline: true
 URxvt.matcher.button: 1
 
 ! Needs urxvt-autocomplete-all-the-things-git
-URxvt.keysym.M-d: perl:aAtt:complete
+URxvt.keysym.A-minus: perl:aAtt:word-complete
+URxvt.keysym.C-minus: perl:aAtt:skeleton-complete
 
 URxvt.iso14755_52: false
 URxvt.iso14755: false
