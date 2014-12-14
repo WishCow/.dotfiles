@@ -1,0 +1,4 @@
+- name: Install fluxbox config
+  copy:
+    src: ./
+    dest: ~/.fluxbox/

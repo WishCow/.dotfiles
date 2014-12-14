@@ -4,3 +4,4 @@
   roles:
     - env
     - bash
+    - { role: fluxbox, tags: [ fluxbox ] }
