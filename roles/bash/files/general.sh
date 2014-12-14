@@ -1,9 +1,3 @@
-#!/bin/bash
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-. ~/.dotfiles/bash_functions.sh
 # Don't store duplicates and ?
 export HISTCONTROL="erasedups:ignoreboth"
 export HISTFILESIZE=500000
@@ -57,7 +51,7 @@ set -o noclobber
 stty stop ""
 
 # Pathname expansion will be treated as case-insensitive
-shopt -s nocaseglob         
+shopt -s nocaseglob
 
 # Serve the current directory through HTTP
 alias serve="python -m SimpleHTTPServer"
@@ -75,9 +69,8 @@ PATH=${PATH}:~/bin/
 
 export VIDIR_EDITOR_ARGS='-c :set nolist | :set ft=vidir-ls'
 
-# Import per-host based settings if they exist
-perhost=~/.dotfiles/perhost/"$(hostname)".bashrc
-[ -f "$perhost" ] && . "$perhost"
-
-# DirColors from trapd00r
-eval $(dircolors -b ~/.dotfiles/lscolors/LS_COLORS)
+source /usr/bin/virtualenvwrapper.sh
+PATH+=":`ruby -e 'print Gem.user_dir'`/bin"
+export GEM_HOME=$(ruby -e 'print Gem.user_dir')
+export FZF_DEFAULT_COMMAND='ag -l -g ""'
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -1,0 +1,6 @@
+- name: Setup local environment
+  hosts: local
+  connection: local
+  roles:
+    - env
+    - bash

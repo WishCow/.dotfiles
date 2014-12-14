@@ -1,0 +1,40 @@
+- name: Create the dotfiles directory
+  file:
+    state: directory
+    path: "{{ dotdir }}"
+
+- name: Copy bash folder under dotfiles
+  copy:
+    src: ./
+    dest: "{{ dotdir }}/bash"
+
+- name: Include .bashrc from .bash_profile
+  lineinfile:
+    dest: ~/.bash_profile
+    create: yes
+    state: present
+    line: '[[ -f ~/.bashrc ]] && . ~/.bashrc'
+
+- name: Include the common bashrc inside ~/.bashrc
+  lineinfile:
+    dest: ~/.bashrc
+    create: yes
+    state: present
+    line: . {{ dotdir }}/bash/main.sh
+
+- name: Create scratch directory
+  file:
+    state: directory
+    path: "{{ scratchDir }}"
+
+- name: Template bash_variables.sh
+  template:
+    src: bash_variables.sh.j2
+    dest: "{{ dotdir }}/bash/variables.sh"
+
+- name: Install trapd00r's dircolors
+  git:
+    accept_hostkey: yes
+    dest: "{{ dotdir }}/bash/lscolors"
+    repo: https://github.com/trapd00r/LS_COLORS.git
+

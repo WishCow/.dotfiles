@@ -1,6 +1,0 @@
-[submodule "lscolors"]
-	path = lscolors
-	url = https://github.com/trapd00r/LS_COLORS.git
-[submodule "ac-att"]
-	path = ac-att
-	url = https://github.com/Vifon/autocomplete-ALL-the-things.git

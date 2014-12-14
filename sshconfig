@@ -1,5 +1,0 @@
-Host *
-    ControlMaster auto 
-    ControlPath ~/.ssh/control_%r@%h:%p
-    GSSAPIAuthentication no
-    GSSAPIKeyExchange no

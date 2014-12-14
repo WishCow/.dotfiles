@@ -1,30 +1,9 @@
 #!/bin/bash -eu
 
-CACHEDIR="$HOME/.dotfiles/scratchpad"
-MARKFILE="$CACHEDIR/marks"
+MARKFILE="$SCRATCHDIR/marks"
 if [ ! -f $MARKFILE ]; then
     echo "declare -A _DIRMARKS='()'" > $MARKFILE
 fi
-
-vi() {
-    vim "$@"
-}
-
-# Run a command in a horizontal/vertical split tmux window, and keep/give focus
-bgh() {
-    local ARGS="$@"
-    tmux split-window -dh "$ARGS"
-}
-
-bgv() {
-    local ARGS="$@"
-    tmux split-window -v "$ARGS"
-}
-
-bgH() {
-    local ARGS="$@"
-    tmux split-window -h "$ARGS"
-}
 
 # Show all the images in a directory with feh
 show() {
