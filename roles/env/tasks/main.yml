@@ -1,3 +1,9 @@
+- name: Install common packages
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: packages
+
 - name: Install config files
   with_dict:
     gitconfig: ~/.gitconfig
@@ -9,6 +15,10 @@
     feh: ~/.config/
     ncmpcpp/: ~/.ncmpcpp
     mutt/: '{{ dotdir }}/mutt'
+    compton.conf: ~/.config/compton.conf
+    dunstrc: ~/.config/dunst/dunstrc
+    xinitrc: ~/.xinitrc
+
   copy:
     src: "{{ item.key }}"
     dest: "{{ item.value }}"

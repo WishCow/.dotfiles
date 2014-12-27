@@ -1,0 +1,24 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] '
+PS2='> '
+PS3='> '
+PS4='+ '
+
+PROMPT_COMMAND="prompt_command"
+
+prompt_command() {
+    # Save history after each command
+    history -a
+
+    # Append user@host:host to shell windows if running rxvt
+    [[ $TERM =~ rxvt ]] && printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"
+
+    # If we are running under tmux, set the current dir in an env variable
+    if [ -n "$TMUX" ]; then
+        tmux setenv -g "TMUX_PWD_$(tmux display -p "#D")" "$PWD"
+    fi
+}
+
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh

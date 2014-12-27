@@ -1,0 +1,49 @@
+#!/bin/bash
+
+has() {
+    which "$1" &>/dev/null
+}
+
+xrdb -merge ~/.Xresources
+setxkbmap hu
+numlockx
+sleep 3 && xmodmap ~/scripts/capstoesc.modmap
+~/scripts/wallpaper.sh
+
+if has pasystray; then
+    pasystray &
+fi
+
+if has mpd; then
+    mpd &
+fi
+
+if has kupfer; then
+    kupfer --no-splash &
+fi
+
+if has dunst; then
+    dunst &
+fi
+
+if has xautolock; then
+    xautolock -time 15 -locker "sudo pm-suspend" -corners 0-00 &
+fi
+
+if has qbittorrent;
+    then qbittorrent &
+fi
+
+if has steam; then
+    steam &
+fi
+
+if has dropboxd; then
+    /usr/bin/dropboxd &
+fi
+
+if has compton; then
+    compton -b
+fi
+
+exec startfluxbox
