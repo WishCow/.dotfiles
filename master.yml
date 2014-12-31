@@ -5,3 +5,4 @@
     - env
     - bash
     - { role: fluxbox, tags: [ fluxbox ] }
+    - { role: root, sudo: yes }

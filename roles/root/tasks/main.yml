@@ -1,0 +1,9 @@
+- name: Create .vim/plugin directory
+  file:
+    path: ~/.vim/plugin
+    state: directory
+
+- name: Copy vimrc
+  copy:
+    src: vimrc
+    dest: ~/.vim/plugin/defaults.vim
