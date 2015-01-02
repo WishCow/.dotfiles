@@ -1,0 +1,30 @@
+- name: Install config files
+  with_dict:
+    gitconfig: ~/.gitconfig
+    ackrc: ~/.ackrc
+    hgrc: ~/.hgrc
+    inputrc: ~/.inputrc
+    'tmux.conf': ~/.tmux.conf
+    ncmpcpp/: ~/.ncmpcpp
+    mutt/: '{{ dotdir }}/mutt'
+  copy:
+    src: "{{ item.key }}"
+    dest: "{{ item.value }}"
+
+- name: Install vim config
+  git:
+    accept_hostkey: yes
+    dest: ~/.vim
+    repo: git@github.com:WishCow/VimConfig.git
+
+- name: Symlink .vimrc to .vim/vimrc
+  file:
+    state: link
+    src: ~/.vim/.vimrc
+    path: ~/.vimrc
+
+- name: Symlink muttrc
+  file:
+    state: link
+    src: '{{ dotdir }}/mutt/muttrc'
+    path: ~/.muttrc

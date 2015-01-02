@@ -1,6 +1,0 @@
-packages:
-  - which
-  - tmux
-  - dunst
-  - gvim
-  - numlockx

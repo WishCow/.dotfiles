@@ -64,7 +64,7 @@ if [ ! -f $MARKFILE ]; then
 fi
 
 # Colorize output, and display hidden files
-function ls() {
+function ll() {
     command ls -lhA --group-directories-first --color=force "$@"
 }
 
@@ -137,4 +137,4 @@ colorpalette() {
     done
 }
 
-export -f ls cd back marks mark dmark colorpalette
+export -f ll cd back marks mark dmark colorpalette

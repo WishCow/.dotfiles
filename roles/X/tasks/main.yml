@@ -1,0 +1,37 @@
+- name: Create config directories
+  file:
+    path: "{{ item }}"
+    recurse: yes
+    state: directory
+  with_items:
+    - "{{ urxvt_autocomplete_dir }}"
+    - ~/.config/dunst
+
+- name: Install config files
+  with_dict:
+    feh: ~/.config/
+    dunstrc: ~/.config/dunst/dunstrc
+    xinitrc: ~/.xinitrc
+    Xresources: ~/.Xresources
+  copy:
+    src: "{{ item.key }}"
+    dest: "{{ item.value }}"
+
+- name: Install urxvt autocomplete
+  git:
+    accept_hostkey: yes
+    dest: "{{ urxvt_autocomplete_dir }}"
+    repo: https://github.com/Vifon/autocomplete-ALL-the-things.git
+
+- name: Symlink urxvt autocomplete under ~/.urxvt
+  file:
+    path: "~/.urxvt/ext/autocomplete"
+    state: link
+    src: "{{ urxvt_autocomplete_dir }}/autocomplete-ALL-the-things"
+
+- name: Install packages
+  sudo: yes
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: graphical_packages

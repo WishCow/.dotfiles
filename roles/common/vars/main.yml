@@ -1,0 +1,10 @@
+packages:
+  - ack
+  - git
+  - htop
+  - mc
+  - ncdu
+  - rsync
+  - sudo
+  - tmux
+  - which

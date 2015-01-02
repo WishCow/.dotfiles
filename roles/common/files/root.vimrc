@@ -11,8 +11,6 @@ if has('syntax') && !exists('g:syntax_on')
   syntax enable
 endif
 
-" Use :help 'option' to see the documentation for the given option.
-
 set autoindent
 set backspace=indent,eol,start
 set complete-=i

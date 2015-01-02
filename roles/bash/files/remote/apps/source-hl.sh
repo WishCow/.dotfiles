@@ -2,5 +2,7 @@
 
 # Syntax highlight for less, needs source-highlight pkg
 
-which source-highlight &>/dev/null || return
-export LESSOPEN="| $(which source-highlight) %s"
+f=/usr/bin/src-hilite-lesspipe.sh
+if [ -f "$f" ]; then
+    export LESSOPEN="| $f %s"
+fi

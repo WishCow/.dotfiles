@@ -5,9 +5,10 @@ has() {
 }
 
 xrdb -merge ~/.Xresources
-setxkbmap hu
+setxkbmap -layout hu,us,no -option grp:alt_shift_toggle,caps:swapescape
 numlockx
-sleep 3 && xmodmap ~/scripts/capstoesc.modmap
+fbxkb &
+xset m 3/1 &
 ~/scripts/wallpaper.sh
 
 if has pasystray; then
@@ -18,16 +19,8 @@ if has mpd; then
     mpd &
 fi
 
-if has kupfer; then
-    kupfer --no-splash &
-fi
-
 if has dunst; then
     dunst &
-fi
-
-if has xautolock; then
-    xautolock -time 15 -locker "sudo pm-suspend" -corners 0-00 &
 fi
 
 if has qbittorrent;
@@ -38,12 +31,9 @@ if has steam; then
     steam &
 fi
 
-if has dropboxd; then
-    /usr/bin/dropboxd &
-fi
-
 if has compton; then
     compton -b
 fi
 
+. ~/.xinitrc_local
 exec startfluxbox

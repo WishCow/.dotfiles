@@ -36,18 +36,8 @@ OnTitlebar Mouse3 :WindowMenu
 Mod1 Tab :NextWindow {groups} (workspace=[current])
 Mod1 Shift Tab :PrevWindow {groups} (workspace=[current])
 
-# cycle through tabs in the current window
-Mod4 Tab :NextTab
-Mod4 Shift Tab :PrevTab
-
 # open a terminal
 Mod1 F1 :Exec urxvt
-
-# volume settings, using common keycodes
-# if these don't work, use xev to find out your real keycodes
-176 :Exec amixer sset Master,0 1+
-174 :Exec amixer sset Master,0 1-
-160 :Exec amixer sset Master,0 toggle
 
 # current window commands
 Mod1 F4 :Close
@@ -87,10 +77,18 @@ Shift Mod4 4 :SendToWorkspace 4
 
 Mod4 d :ShowDesktop
 Mod4 e :Exec Thunar
-Mod4 r :Reconfig
-
+Mod4 l :Exec ~/bin/lock.sh
 Mod4 o :SendToNextHead
-
+Mod4 r :Reconfig
 Mod4 s :ArrangeWindowsVertical
-Mod4 v :ArrangeWindowsHorizontal
 Mod4 u :ToggleDecor
+Mod4 v :ArrangeWindowsHorizontal
+
+XF86AudioLowerVolume :Exec ~/bin/peripherials/volume.py -10
+XF86AudioRaiseVolume :Exec ~/bin/peripherials/volume.py 10
+XF86AudioMute :Exec ~/bin/peripherials/volume.py toggle
+XF86MonBrightnessUp :Exec ~/bin/peripherials/brightness.py display
+XF86MonBrightnessDown :Exec ~/bin/peripherials/brightness.py display
+
+Control space :Exec ~/local/dmenu.sh
+Mod4 Tab :Exec ~/bin/tasker.py

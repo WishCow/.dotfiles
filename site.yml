@@ -1,0 +1,24 @@
+- name: Setup common things
+  hosts: all
+  connection: local
+  roles:
+    - common
+
+- name: Setup shell environment
+  hosts: shell
+  connection: local
+  roles:
+    - shell
+    - bash
+
+- name: Setup fluxbox
+  hosts: fluxbox
+  connection: local
+  roles:
+    - fluxbox
+
+- name: Setup graphical things
+  hosts: X
+  connection: local
+  roles:
+    - X

@@ -1,8 +1,0 @@
-- name: Setup local environment
-  hosts: local
-  connection: local
-  roles:
-    - env
-    - bash
-    - { role: fluxbox, tags: [ fluxbox ] }
-    - { role: root, sudo: yes }

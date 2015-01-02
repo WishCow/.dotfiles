@@ -1,0 +1,17 @@
+graphical_packages:
+  - dunst
+  - fbxkb
+  - feh
+  - firefox
+  - mupdf
+  - pavucontrol
+  - ponymix
+  - pulseaudio
+  - pulseaudio-alsa
+  - slock
+  - thunar
+  - tumbler
+  - xsel
+urxvt_autocomplete_dir: ~/.urxvt/ext/ac
+aur_packages:
+  - rxvt-unicode-pixbux

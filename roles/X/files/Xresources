@@ -1,4 +1,4 @@
-URxvt.background:  #2e1e1e
+URxvt.background:  #3e1e1e
 URxvt.foreground:  white
 URxvt.cursorColor: #00ff00
 URxvt.scrollBar: false
@@ -40,7 +40,7 @@ URxvt.keysym.C-minus: perl:aAtt:skeleton-complete
 URxvt.iso14755_52: false
 URxvt.iso14755: false
 
-URxvt.iconFile: /usr/share/icons/NITRUX/apps/scalable/terminal.svg
+URxvt.iconFile: /usr/share/icons/Nitrux/apps/16/Terminal.svg
 
 URxvt.keysym.C-V: perl:clipboard:paste
 URxvt.saveLines: 0
