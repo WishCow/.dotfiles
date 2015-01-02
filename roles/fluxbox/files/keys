@@ -90,5 +90,5 @@ XF86AudioMute :Exec ~/bin/peripherials/volume.py toggle
 XF86MonBrightnessUp :Exec ~/bin/peripherials/brightness.py display
 XF86MonBrightnessDown :Exec ~/bin/peripherials/brightness.py display
 
-Control space :Exec ~/local/dmenu.sh
+Control space :Exec ~/bin/dmenu_run.sh
 Mod4 Tab :Exec ~/bin/tasker.py

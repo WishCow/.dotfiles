@@ -1,5 +1,20 @@
-- name: Install config files
+- name: Create the dotfiles directory
+  file:
+    state: directory
+    path: "{{ dotdir }}"
+
+- name: Copy bash folder under dotfiles
+  copy:
+    src: remote/
+    dest: "{{ dotdir }}/bash"
+
+- name: Setup config files
+  copy:
+    src: "{{ item.key }}"
+    dest: "{{ item.value }}"
   with_dict:
+    bash_profile: ~/.bash_profile
+    bashrc: ~/.bashrc
     gitconfig: ~/.gitconfig
     ackrc: ~/.ackrc
     hgrc: ~/.hgrc
@@ -7,9 +22,48 @@
     'tmux.conf': ~/.tmux.conf
     ncmpcpp/: ~/.ncmpcpp
     mutt/: '{{ dotdir }}/mutt'
-  copy:
-    src: "{{ item.key }}"
-    dest: "{{ item.value }}"
+
+- name: Create scratch directory
+  file:
+    state: directory
+    path: "{{ scratchDir }}"
+
+- name: Template bash_variables.sh
+  template:
+    src: bash_variables.sh.j2
+    dest: "{{ dotdir }}/bash/variables.sh"
+
+- name: Install trapd00r's dircolors
+  git:
+    accept_hostkey: yes
+    dest: "{{ dotdir }}/bash/lscolors"
+    repo: https://github.com/trapd00r/LS_COLORS.git
+
+- name: Check if autojump is installed
+  register: autojump
+  stat:
+    path: ~/.autojump
+    get_checksum: false
+    get_md5: false
+
+- name: Clone autojump
+  when: not autojump.stat.exists
+  git:
+    accept_hostkey: yes
+    dest: /tmp/autojump
+    repo: https://github.com/joelthelion/autojump.git
+
+- name: Install autojump
+  when: not autojump.stat.exists
+  shell: ./install.py
+  args:
+    chdir: /tmp/autojump
+
+- name: Remove autojump repo
+  when: not autojump.stat.exists
+  file:
+    path: /tmp/autojump
+    state: absent
 
 - name: Install vim config
   git:
@@ -28,3 +82,9 @@
     state: link
     src: '{{ dotdir }}/mutt/muttrc'
     path: ~/.muttrc
+
+- name: Clone the scripts repository
+  git:
+    accept_hostkey: yes
+    dest: ~/bin
+    repo: git@github.com:WishCow/scripts.git

@@ -9,7 +9,6 @@
   connection: local
   roles:
     - shell
-    - bash
 
 - name: Setup fluxbox
   hosts: fluxbox
