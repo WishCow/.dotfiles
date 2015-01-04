@@ -1,40 +1,14 @@
 # Don't store duplicates in history
-HISTCONTROL="erasedups:ignoreboth"
-HISTFILESIZE=500000
-HISTSIZE=100000
-HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S : "
+export HISTCONTROL="erasedups:ignoreboth"
+export HISTFILESIZE=500000
+export HISTSIZE=100000
+export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S : "
 
-PROMPT_COMMAND="prompt_command"
-EDITOR="vim"
-PAGER=less
+export EDITOR="vim"
+export PAGER=less
 
 # Trapd00r's dircolors
 eval $(dircolors -b "$DIR"/lscolors/LS_COLORS)
-
-# Append to history
-shopt -s histappend
-
-# Multiline commands take only 1 line
-shopt -s cmdhist
-
-# Extended globbing (**)
-shopt -s extglob
-
-# Star matches dotfiles
-shopt -s globstar
-
-# Recheck window size after each command
-shopt -s checkwinsize
-
-# Avoid overwriting files with redirections (>)
-set -o noclobber
-
-# Disable CTRL-s freezing/CTRL-q starting program flow
-stty stop ""
-
-# Pathname expansion will be treated as case-insensitive
-shopt -s nocaseglob
-
 
 # J: Mark rows that match a search string
 # F: Exit immediately if output is less than one page
@@ -45,25 +19,14 @@ shopt -s nocaseglob
 # Q: Disable terminal bells
 export LESS=' -JFRiXMQ '
 
-prompt_command() {
-    # Save history after each command
-    history -a
-
-    # If we are running under tmux, set the current dir in an env variable
-    if [ -n "$TMUX" ]; then
-        tmux setenv -g "TMUX_PWD_$(tmux display -p "#D")" "$PWD"
-    fi
-}
-
-
 # File to store marks
-MARKFILE="$SCRATCHDIR/marks"
+export MARKFILE="$SCRATCHDIR/marks"
 
 if [ ! -f $MARKFILE ]; then
     echo "declare -A _DIRMARKS='()'" > $MARKFILE
 fi
 
-# Colorize output, and display hidden files
+# Colorize output, display hidden files, show human readable sizes
 function ll() {
     command ls -lhA --group-directories-first --color=force "$@"
 }

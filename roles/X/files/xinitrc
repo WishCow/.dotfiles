@@ -23,17 +23,5 @@ if has dunst; then
     dunst &
 fi
 
-if has qbittorrent;
-    then qbittorrent &
-fi
-
-if has steam; then
-    steam &
-fi
-
-if has compton; then
-    compton -b
-fi
-
 . ~/.xinitrc_local
 exec startfluxbox
