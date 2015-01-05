@@ -9,7 +9,7 @@ setxkbmap -layout hu,us,no -option grp:alt_shift_toggle,caps:swapescape
 numlockx
 fbxkb &
 xset m 3/1 &
-~/scripts/wallpaper.sh
+~/bin/wallpaper.sh &
 
 if has pasystray; then
     pasystray &

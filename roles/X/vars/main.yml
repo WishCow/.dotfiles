@@ -1,6 +1,5 @@
 graphical_packages:
   - dunst
-  - fbxkb
   - feh
   - firefox
   - mupdf
@@ -15,3 +14,4 @@ graphical_packages:
 urxvt_autocomplete_dir: ~/.urxvt/ext/ac
 aur_packages:
   - rxvt-unicode-pixbux
+  - fbxkb

@@ -25,9 +25,11 @@
             [submenu] (System Styles) {Choose a style...}
                 [stylesdir] (/usr/share/fluxbox/styles)
             [end]
-        [submenu] (User Styles) {Choose a style...}
-            [stylesdir] (~/.fluxbox/styles)
+            [submenu] (User Styles) {Choose a style...}
+                [stylesdir] (~/.fluxbox/styles)
+            [end]
         [end]
+        [exec] (Next wallpaper) {pkill -USR1 wallpaper.sh}
         [reconfig] (Reload config)
         [restart] (Restart)
         [separator]
