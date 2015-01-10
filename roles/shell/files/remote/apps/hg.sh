@@ -1,7 +1,9 @@
+#!/bin/bash
+
 which hg &>/dev/null || return
 
 # Show diffs when commiting with hg
-HGEDITOR=~/.scripts/hg/hgeditor
+HGEDITOR=~/bin/hg/hgeditor
 
 # Run hg command recursively in current dir
 hgr() {
