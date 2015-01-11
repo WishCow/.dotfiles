@@ -5,14 +5,21 @@
     state: present
   with_items: packages
 
-- name: Create root .vim/plugin directory
+- name: Create some config directories
   sudo: yes
   file:
-    path: ~/.vim/plugin
+    path: "{{ item }}"
     state: directory
+    recurse: yes
+  with_items:
+    - ~/.vim/plugin
+    - ~/.config/htop
 
-- name: Copy root's vimrc
+- name: Copy some config files
   sudo: yes
   copy:
-    src: root.vimrc
-    dest: ~/.vim/plugin/defaults.vim
+    src: "{{ item.key }}"
+    dest: "{{ item.value }}"
+  with_dict:
+    root.vimrc: ~/.vim/plugin/defaults.vim
+    htoprc: ~/.config/htop/htoprc

@@ -1,7 +1,12 @@
 - name: Create the dotfiles directory
   file:
     state: directory
-    path: "{{ dotdir }}"
+    path: "{{ item }}"
+    recurse: true
+  with_items:
+    - "{{ dotdir }}"
+    - ~/.config/htop
+    - "{{ scratchDir }}"
 
 - name: Copy bash folder under dotfiles
   copy:
@@ -19,14 +24,10 @@
     ackrc: ~/.ackrc
     hgrc: ~/.hgrc
     inputrc: ~/.inputrc
-    'tmux.conf': ~/.tmux.conf
+    tmux.conf: ~/.tmux.conf
     ncmpcpp/: ~/.ncmpcpp
     mutt/: '{{ dotdir }}/mutt'
-
-- name: Create scratch directory
-  file:
-    state: directory
-    path: "{{ scratchDir }}"
+    htoprc: ~/.config/htop/htoprc
 
 - name: Template bash_variables.sh
   template:

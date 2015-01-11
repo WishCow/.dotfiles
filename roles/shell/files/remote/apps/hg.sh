@@ -15,5 +15,3 @@ hgr() {
         printf "\n"
     done
 }
-
-declare -f hgr
