@@ -53,8 +53,8 @@ HISTFILESIZE=500000
 HISTSIZE=100000
 HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S : "
 
-EDITOR="vim"
-PAGER=less
+export EDITOR="vim"
+export PAGER=less
 
 # J: Mark rows that match a search string
 # F: Exit immediately if output is less than one page
@@ -63,7 +63,7 @@ PAGER=less
 # X: Don't clear the screen
 # M: Awlays show status line
 # Q: Disable terminal bells
-LESS=' -JFRiXMQ '
+export LESS=' -JFRiXMQ '
 
 # File to store marks
 MARKFILE="$SCRATCHDIR/marks"
