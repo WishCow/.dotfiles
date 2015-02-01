@@ -1,6 +1,8 @@
 save_filelist
-action_0
+action_0 F1
 action_1 F2
+action_2 F3
+action_3 F4
 remove
 toggle_fullscreen Return f
 zoom_default s
