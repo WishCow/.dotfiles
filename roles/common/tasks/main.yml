@@ -22,4 +22,5 @@
     dest: "{{ item.value }}"
   with_dict:
     root.vimrc: ~/.vim/plugin/defaults.vim
+    root.bashrc: ~/.bashrc
     htoprc: ~/.config/htop/htoprc
