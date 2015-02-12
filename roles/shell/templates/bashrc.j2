@@ -1,0 +1,10 @@
+# {{ ansible_managed }}
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+SCRATCHDIR={{ scratchDir }}
+
+for f in {{ role_path }}/files/remote/apps/*.sh; do
+    . "$f"
+done

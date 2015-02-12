@@ -4,40 +4,35 @@
     path: "{{ item }}"
     recurse: true
   with_items:
-    - "{{ dotdir }}"
-    - ~/.config/htop
     - "{{ scratchDir }}"
 
-- name: Copy bash folder under dotfiles
-  copy:
-    src: remote/
-    dest: "{{ dotdir }}/bash"
-
 - name: Setup config files
-  copy:
-    src: "{{ item.key }}"
+  file:
+    state: link
+    src: "{{ role_path }}/files/{{ item.key }}"
     dest: "{{ item.value }}"
   with_dict:
     bash_profile: ~/.bash_profile
-    bashrc: ~/.bashrc
     gitconfig: ~/.gitconfig
     ackrc: ~/.ackrc
     hgrc: ~/.hgrc
     inputrc: ~/.inputrc
     tmux.conf: ~/.tmux.conf
     ncmpcpp/: ~/.ncmpcpp
-    mutt/: '{{ dotdir }}/mutt'
-    htoprc: ~/.config/htop/htoprc
+    mutt: ~/.mutt
+    muttrc: ~/.muttrc
+    htop: ~/.config/htop
 
-- name: Template bash_variables.sh
+- name: Template out the bashrc file
   template:
-    src: bash_variables.sh.j2
-    dest: "{{ dotdir }}/bash/variables.sh"
+    src: bashrc.j2
+    dest: ~/.bashrc
+
 
 - name: Install trapd00r's dircolors
   git:
     accept_hostkey: yes
-    dest: "{{ dotdir }}/bash/lscolors"
+    dest: ~/.lscolors
     repo: https://github.com/trapd00r/LS_COLORS.git
 
 - name: Check if autojump is installed
@@ -77,12 +72,6 @@
     state: link
     src: ~/.vim/.vimrc
     path: ~/.vimrc
-
-- name: Symlink muttrc
-  file:
-    state: link
-    src: '{{ dotdir }}/mutt/muttrc'
-    path: ~/.muttrc
 
 - name: Clone the scripts repository
   git:

@@ -5,16 +5,16 @@
     state: directory
   with_items:
     - "{{ urxvt_autocomplete_dir }}"
-    - ~/.config/dunst
 
 - name: Install config files
   with_dict:
-    feh: ~/.config/
-    dunstrc: ~/.config/dunst/dunstrc
+    feh: ~/.config/feh
+    dunst: ~/.config/dunst
     xinitrc: ~/.xinitrc
     Xresources: ~/.Xresources
-  copy:
-    src: "{{ item.key }}"
+  file:
+    state: link
+    src: "{{ role_path }}/files/{{ item.key }}"
     dest: "{{ item.value }}"
 
 - name: Install urxvt autocomplete

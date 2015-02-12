@@ -1,5 +1,0 @@
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-# Load bash configuration
-. ~/.dotfiles/bash/main.sh
