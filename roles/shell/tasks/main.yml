@@ -78,3 +78,12 @@
     accept_hostkey: yes
     dest: ~/bin
     repo: git@github.com:WishCow/scripts.git
+
+- name: Clone tmux plugins
+  git:
+    accept_hostkey: yes
+    dest: "{{ scratchDir }}/{{ item.key }}"
+    repo: "{{ item.value }}"
+  with_dict:
+    tmux-yank: https://github.com/tmux-plugins/tmux-yank
+    tmux-copycat: https://github.com/tmux-plugins/tmux-copycat
