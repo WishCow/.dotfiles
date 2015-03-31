@@ -56,3 +56,15 @@ URxvt.color14:      #93e0e3
 ! white
 URxvt.color7:       #dcdccc
 URxvt.color15:      #ffffff
+
+rofi.bg: #000
+rofi.bgalt: #161500
+rofi.fg: #ff0
+rofi.bc: #7d7a01
+rofi.location: 5
+rofi.font: Inconsolata 9
+rofi.terminal: urxvt
+rofi.key-run: control+space
+rofi.key-window: mod4+Tab
+rofi.hlbg: #ff0
+rofi.hlfg: #000
