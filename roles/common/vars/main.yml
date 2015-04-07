@@ -1,6 +1,7 @@
 packages:
   - ack
   - git
+  - xautolock
   - htop
   - mc
   - ncdu

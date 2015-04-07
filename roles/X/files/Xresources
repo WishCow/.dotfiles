@@ -68,3 +68,9 @@ rofi.key-run: control+space
 rofi.key-window: mod4+Tab
 rofi.hlbg: #ff0
 rofi.hlfg: #000
+
+Xautolock.time: 5
+Xautolock.locker: /usr/bin/slock
+Xautolock.killer: /usr/bin/systemctl suspend
+Xautolock.corners: 0-0+
+Xautolock.cornersize: 50

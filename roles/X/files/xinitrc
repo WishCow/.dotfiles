@@ -25,5 +25,9 @@ if has dunst; then
     dunst &
 fi
 
+if has xautolock; then
+    xautolock &
+fi
+
 . ~/.xinitrc_local
 exec startfluxbox
