@@ -5,7 +5,7 @@ has() {
 }
 
 xrdb -merge ~/.Xresources
-setxkbmap -layout hu,us,no -option grp:alt_shift_toggle,caps:swapescape
+setxkbmap -layout hu,us,no -option grp:alt_shift_toggle
 xset -dpms
 xset s off off
 numlockx
@@ -28,6 +28,9 @@ fi
 if has xautolock; then
     xautolock &
 fi
+
+xmodmap ~/.xmodmap
+xcape -e Control_L=Escape -t 150
 
 . ~/.xinitrc_local
 exec startfluxbox
