@@ -10,15 +10,19 @@
 [pull]
     rebase = true
 
+[advice]
+    statusHints = false
+
 [alias]
     glog = log --color=always --graph --topo-order --branches --remotes --tags --pretty='format:%Cgreen%h%Creset %s %C(black bold)(by %an)%Creset%C(yellow bold)%d%Creset%n'
-    slog = log --oneline --decorate --all
+    slog = log --graph --oneline --branches --remotes --tags --date=relative --format='%Cgreen%h%Creset %s %C(black bold)(%an, %ad)%C(yellow)%d'
     st = status -sb
     sdiff = diff --cached
-    ci = commit
+    ci = commit --verbose
+    commit = commit --verbose
     amend = commit --amend -C HEAD
     pull = pull --ff-only
-    branch-diff = !git diff $(git merge-base $1 HEAD)..
+    bdiff = !git diff $(git merge-base ${1:-master} HEAD)..
 
 [merge]
     tool = splice
@@ -30,3 +34,7 @@
 
 [include]
     path = ~/.gitconfig_local
+
+[diff]
+    renames = copies
+    noprefix = true
