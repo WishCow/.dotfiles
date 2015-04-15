@@ -30,7 +30,7 @@ if has xautolock; then
 fi
 
 xmodmap ~/.xmodmap
-xcape -e Control_L=Escape -t 150
+xcape -e Control_L=Escape -t 120
 
 . ~/.xinitrc_local
 exec startfluxbox

@@ -12,6 +12,7 @@
     dunst: ~/.config/dunst
     xinitrc: ~/.xinitrc
     Xresources: ~/.Xresources
+    xmodmap: ~/.xmodmap
   file:
     state: link
     src: "{{ role_path }}/files/{{ item.key }}"
