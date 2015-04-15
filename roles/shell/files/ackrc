@@ -1,4 +1,7 @@
 --smart-case
+--sort-files
+--group
+--context=1
 --type-set=twig=.twig
 --type-set=sh=.sh
 --type-set=ini=ini
