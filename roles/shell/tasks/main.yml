@@ -22,6 +22,7 @@
     mutt: ~/.mutt
     muttrc: ~/.muttrc
     htop: ~/.config/htop
+    fontconfig: ~/.config/fontconfig
 
 - name: Template out the bashrc file
   template:
