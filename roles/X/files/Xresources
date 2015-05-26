@@ -74,3 +74,11 @@ Xautolock.locker: /usr/bin/slock
 Xautolock.killer: /usr/bin/systemctl suspend
 Xautolock.corners: +-00
 Xautolock.cornersize: 5
+
+Xft.antialias: 1
+Xft.autohint: 0
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
