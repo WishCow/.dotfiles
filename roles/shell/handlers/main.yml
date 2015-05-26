@@ -1,0 +1,2 @@
+- name: Install vim plugins
+  raw: vim -c 'PlugInstall' -c 'qa'

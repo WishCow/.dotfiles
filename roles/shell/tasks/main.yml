@@ -67,6 +67,8 @@
     accept_hostkey: yes
     dest: ~/.vim
     repo: git@github.com:WishCow/VimConfig.git
+  notify:
+    - Install vim plugins
 
 - name: Symlink .vimrc to .vim/vimrc
   file:
