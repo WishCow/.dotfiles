@@ -1,5 +1,4 @@
 packages:
-  - ack
   - git
   - xautolock
   - htop
@@ -9,3 +8,4 @@ packages:
   - sudo
   - tmux
   - which
+  - the_silver_searcher
