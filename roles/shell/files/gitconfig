@@ -38,3 +38,6 @@
 [diff]
     renames = copies
     noprefix = true
+
+[core]
+    excludesfile = ~/.gitignore
