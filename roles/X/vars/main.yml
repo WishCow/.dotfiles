@@ -1,5 +1,4 @@
 graphical_packages:
-  - dunst
   - feh
   - firefox
   - mupdf
@@ -14,6 +13,7 @@ graphical_packages:
   - xorg-xrdb
   - xorg-xmodmap
   - ttf-inconsolata
+  - mate-notification-daemon
 urxvt_autocomplete_dir: ~/.urxvt/ext/ac
 aur_packages:
   - rxvt-unicode-pixbux

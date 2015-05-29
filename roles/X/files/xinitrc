@@ -21,10 +21,6 @@ if has mpd; then
     mpd &
 fi
 
-if has dunst; then
-    dunst &
-fi
-
 if has xautolock; then
     xautolock &
 fi

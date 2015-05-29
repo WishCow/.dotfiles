@@ -9,7 +9,6 @@
 - name: Install config files
   with_dict:
     feh: ~/.config/feh
-    dunst: ~/.config/dunst
     xinitrc: ~/.xinitrc
     Xresources: ~/.Xresources
     xmodmap: ~/.xmodmap
