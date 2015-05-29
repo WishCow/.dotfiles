@@ -9,4 +9,8 @@
 --type-set=behat=.feature
 --type-set=scss=.scss
 --ignore-dir=cache
+--ignore-dir=build
+--ignore-dir=jsdoc
+--ignore-dir=dist
+--ignore-dir=bower_components
 --type-set=markdown=.md
