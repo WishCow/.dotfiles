@@ -35,3 +35,10 @@
     name: "{{ item }}"
     state: present
   with_items: graphical_packages
+
+- name: Install firefox user.js
+  when: firefox_profile_dir is defined
+  file:
+    state: link
+    src: "{{ role_path }}/files/firefox_user.js"
+    dest: "~/.mozilla/firefox/{{ firefox_profile_dir }}/user.js"
