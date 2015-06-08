@@ -1,2 +1,2 @@
-- name: Install vim plugins
-  raw: vim -c 'PlugInstall' -c 'qa'
+- name: Refresh vim plugins
+  raw: vim -c 'PlugInstall' -c 'PlugClean' -c 'qa'

@@ -67,7 +67,7 @@
     dest: ~/.vim
     repo: git@github.com:WishCow/VimConfig.git
   notify:
-    - Install vim plugins
+    - Refresh vim plugins
 
 - name: Symlink .vimrc to .vim/vimrc
   file:
