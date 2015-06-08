@@ -25,3 +25,5 @@ user_pref("extensions.VimFx.commands.scroll_page_up.keys", "[]");
 user_pref("extensions.VimFx.commands.scroll_right.keys", "[]");
 user_pref("extensions.VimFx.commands.tab_next.keys", '["l"]');
 user_pref("extensions.VimFx.commands.tab_prev.keys", '["h"]');
+
+user_pref("network.proxy.socks_remote_dns", true);
