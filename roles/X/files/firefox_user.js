@@ -27,3 +27,4 @@ user_pref("extensions.VimFx.commands.tab_next.keys", '["l"]');
 user_pref("extensions.VimFx.commands.tab_prev.keys", '["h"]');
 
 user_pref("network.proxy.socks_remote_dns", true);
+user_pref("privacy.trackingprotection.enabled", true);
