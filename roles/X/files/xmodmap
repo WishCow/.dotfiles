@@ -28,7 +28,7 @@ add mod4 = Super_L Super_R
 add mod5 = Mode_switch ISO_Level3_Shift
 
 ! Mode switch + hjkl is arrow keys
-keycode 43 = h H Left
-keycode 44 = j J Down
-keycode 45 = k K Up
-keycode 46 = l L Right
+keycode 43 = h H Left h h
+keycode 44 = j J Down j j
+keycode 45 = k K Up k k
+keycode 46 = l L Right l l

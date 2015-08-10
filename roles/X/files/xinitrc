@@ -5,7 +5,7 @@ has() {
 }
 
 xrdb -merge ~/.Xresources
-setxkbmap -layout hu,us,no -option grp:alt_shift_toggle
+setxkbmap -layout hu,no,us -option grp:alt_shift_toggle
 xset -dpms
 xset s off off
 numlockx
