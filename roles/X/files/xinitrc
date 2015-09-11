@@ -24,7 +24,7 @@ if has xautolock; then
     xautolock &
 fi
 
-keyboard.sh
+~/bin/keyboard.sh
 
 [ -f ~/.xinitrc_local ] && . ~/.xinitrc_local
 exec startfluxbox
