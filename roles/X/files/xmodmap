@@ -32,3 +32,5 @@ keycode 43 = h H Left h h
 keycode 44 = j J Down j j
 keycode 45 = k K Up k k
 keycode 46 = l L Right l l
+
+keycode 51 = udoubleacute Udoubleacute iacute Iacute iacute Iacute
