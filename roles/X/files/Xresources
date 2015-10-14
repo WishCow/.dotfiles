@@ -10,7 +10,7 @@ URxvt.matcher.button: 1
 
 ! Needs urxvt-autocomplete-all-the-things-git
 URxvt.keysym.A-minus: perl:aAtt:word-complete
-URxvt.keysym.C-minus: perl:aAtt:skeleton-complete
+URxvt.keysym.A-comma: perl:aAtt:fuzzy-word-complete
 
 URxvt.iso14755_52: false
 URxvt.iso14755: false
