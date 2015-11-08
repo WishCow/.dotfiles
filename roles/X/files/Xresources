@@ -20,43 +20,6 @@ URxvt.iconFile: /usr/share/icons/Nitrux/apps/16/Terminal.svg
 URxvt.keysym.C-V: perl:clipboard:paste
 URxvt.saveLines: 0
 
-! special
-URxvt.foreground:   #ffffff
-URxvt.background:   #000000
-URxvt.cursorColor:  #ffffff
-
-! black
-URxvt.color0:       #1e2320
-URxvt.color8:       #709080
-
-! red
-URxvt.color1:       #705050
-URxvt.color9:       #dca3a3
-
-! green
-URxvt.color2:       #60b48a
-URxvt.color10:      #c3bf9f
-
-! yellow
-URxvt.color3:       #dfaf8f
-URxvt.color11:      #f0dfaf
-
-! blue
-URxvt.color4:       #506070
-URxvt.color12:      #94bff3
-
-! magenta
-URxvt.color5:       #dc8cc3
-URxvt.color13:      #ec93d3
-
-! cyan
-URxvt.color6:       #8cd0d3
-URxvt.color14:      #93e0e3
-
-! white
-URxvt.color7:       #dcdccc
-URxvt.color15:      #ffffff
-
 rofi.bg: #000
 rofi.bgalt: #161500
 rofi.fg: #ff0
@@ -82,3 +45,22 @@ Xft.hinting: 1
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
+
+URxvt.background: rgb:00/00/00
+URxvt.foreground: rgb:ff/ff/ff
+URxvt.color0:     rgb:00/00/00
+URxvt.color1:     rgb:d3/62/65
+URxvt.color2:     rgb:ae/ce/91
+URxvt.color3:     rgb:e7/e1/8c
+URxvt.color4:     rgb:7a/7a/b0
+URxvt.color5:     rgb:96/3c/59
+URxvt.color6:     rgb:41/81/79
+URxvt.color7:     rgb:be/be/be
+URxvt.color8:     rgb:66/66/66
+URxvt.color9:     rgb:ef/81/71
+URxvt.color10:    rgb:e5/f7/79
+URxvt.color11:    rgb:ff/f7/96
+URxvt.color12:    rgb:41/86/be
+URxvt.color13:    rgb:ef/9e/be
+URxvt.color14:    rgb:71/be/be
+URxvt.color15:    rgb:ff/ff/ff
