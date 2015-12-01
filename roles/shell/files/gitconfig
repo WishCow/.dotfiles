@@ -27,6 +27,7 @@
 [merge]
     tool = splice
     defaultToUpstream = true
+    strategy = patience
 
 [mergetool "splice"]
     cmd = vim -f $BASE $LOCAL $REMOTE $MERGED -c SpliceInit
