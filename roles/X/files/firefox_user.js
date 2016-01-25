@@ -12,19 +12,16 @@ user_pref("browser.cache.memory.enable", true);
 // Some social crap
 user_pref("loop.enabled", false);
 
-
-// VimFX hotkeys
-user_pref("extensions.VimFx.commands.follow_next.keys", '["e"]');
-user_pref("extensions.VimFx.commands.follow_previous.keys", '["q"]');
-user_pref("extensions.VimFx.commands.restore_tab.keys", '["u"]');
-user_pref("extensions.VimFx.commands.scroll_half_page_down.keys", '["c-f"]');
-user_pref("extensions.VimFx.commands.scroll_half_page_up.keys", '["c-b"]');
-user_pref("extensions.VimFx.commands.scroll_left.keys", "[]");
-user_pref("extensions.VimFx.commands.scroll_page_down.keys", "[]");
-user_pref("extensions.VimFx.commands.scroll_page_up.keys", "[]");
-user_pref("extensions.VimFx.commands.scroll_right.keys", "[]");
-user_pref("extensions.VimFx.commands.tab_next.keys", '["l"]');
-user_pref("extensions.VimFx.commands.tab_prev.keys", '["h"]');
-
 user_pref("network.proxy.socks_remote_dns", true);
 user_pref("privacy.trackingprotection.enabled", true);
+
+user_pref("extensions.VimFx.mode.normal.follow_next", 'e');
+user_pref("extensions.VimFx.mode.normal.follow_previous", 'q');
+user_pref("extensions.VimFx.mode.normal.scroll_half_page_down", '<c-f>');
+user_pref("extensions.VimFx.mode.normal.scroll_half_page_up", '<c-b>');
+user_pref("extensions.VimFx.mode.normal.scroll_left", '');
+user_pref("extensions.VimFx.mode.normal.scroll_right", '');
+user_pref("extensions.VimFx.mode.normal.scroll_to_mark", "'");
+user_pref("extensions.VimFx.mode.normal.tab_restore", 'u');
+user_pref("extensions.VimFx.mode.normal.tab_select_next", 'l');
+user_pref("extensions.VimFx.mode.normal.tab_select_previous", 'h');
