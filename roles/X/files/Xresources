@@ -28,7 +28,7 @@ rofi.location: 5
 rofi.font: Inconsolata 9
 rofi.terminal: urxvt
 rofi.key-run: control+space
-rofi.key-window: mod4+Tab
+rofi.key-window: SuperL+Tab
 rofi.hlbg: #ff0
 rofi.hlfg: #000
 
