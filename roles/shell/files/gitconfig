@@ -1,3 +1,4 @@
+# vim: set filetype=gitconfig:
 [user]
     name = Norbert Kéri
 
@@ -39,6 +40,9 @@
 [diff]
     renames = copies
     noprefix = true
+
+[rebase]
+    autoStash = true
 
 [core]
     excludesfile = ~/.gitignore
