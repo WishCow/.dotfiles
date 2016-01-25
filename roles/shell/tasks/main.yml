@@ -35,31 +35,19 @@
     dest: ~/.lscolors
     repo: https://github.com/trapd00r/LS_COLORS.git
 
-- name: Check if autojump is installed
-  register: autojump
+- name: Check if rupa/z is installed
+  register: rupa_z
   stat:
-    path: ~/.autojump
+    path: ~/.rupa_z
     get_checksum: false
     get_md5: false
 
-- name: Clone autojump
-  when: not autojump.stat.exists
+- name: Clone rupa_z
+  when: not rupa_z.stat.exists
   git:
     accept_hostkey: yes
-    dest: /tmp/autojump
-    repo: https://github.com/joelthelion/autojump.git
-
-- name: Install autojump
-  when: not autojump.stat.exists
-  shell: ./install.py
-  args:
-    chdir: /tmp/autojump
-
-- name: Remove autojump repo
-  when: not autojump.stat.exists
-  file:
-    path: /tmp/autojump
-    state: absent
+    dest: ~/.rupa_z
+    repo: https://github.com/WishCow/z.git
 
 - name: Install vim config
   git:
