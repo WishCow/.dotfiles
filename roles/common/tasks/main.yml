@@ -24,3 +24,8 @@
     root.vimrc: ~/.vim/plugin/defaults.vim
     root.bashrc: ~/.bashrc
     htoprc: ~/.config/htop/htoprc
+
+- name: Install systemd units
+  copy:
+    src: systemd
+    dest: ~/.config/

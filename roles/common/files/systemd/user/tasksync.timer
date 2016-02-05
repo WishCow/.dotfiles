@@ -1,0 +1,10 @@
+[Unit]
+Description=Sync tasks every 10 minutes
+After=network.target
+
+[Timer]
+OnBootSec=15sec
+OnUnitActiveSec=10min
+
+[Install]
+WantedBy=timers.target
